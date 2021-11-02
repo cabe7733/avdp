@@ -1,0 +1,110 @@
+<section class="team-section text-center my-5">
+    <div class="container pr-5 pl-5">
+        <mdb-card cascade="true" wider="true" reverse="true" class="my-4">
+            <mdb-card-body cascade="true" class="text-center">
+                <mdb-card-title>
+                    <h4>
+                        <strong>Archivos</strong>
+                    </h4>
+                </mdb-card-title>
+                <h5 class="indigo-text">
+                    <strong>Documentos y Proyectos</strong>
+                </h5>
+                <mdb-card-text>
+                    En esta seccion prodras encontrar nuestros documentos legales, y los proyectos que avanzamos en este momento en nuestra fundación
+                </mdb-card-text>
+                <a class="px-2 icons-sm tw-ic">
+                    <mdb-icon fas icon="file-alt"></mdb-icon>
+                </a>
+                <a class="px-2 icons-sm li-ic">
+                    <mdb-icon fas icon="project-diagram"></mdb-icon>
+                </a>
+            </mdb-card-body>
+
+        </mdb-card>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-lg-6 col-12">
+            <!-- Card -->
+            <mdb-card style="background-image: url('../../../assets/img/pajaro1.jpeg')" class="card-image hoverable mb-3 mx-2">
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h3 class="cyan-text mb-2">
+                            <mdb-icon fas icon="file-alt"></mdb-icon>
+                            Documentos
+                        </h3>
+
+                        <p *ngFor="let item of documentos; let i=index">
+                            <a mdbBtn *ngIf="i<=1" color="teal" class="waves-light" mdbWavesEffect [href]="item.ruta" target="_blank">
+                                <mdb-icon fas icon="file-download" class="left"></mdb-icon>
+                                {{item.title}}</a>
+                        </p>
+                        <button mdbBtn color="primary" class="waves-light" type="button" (click)="showHideDoc()" mdbWavesEffect>
+                          <ng-container *ngIf="!Doc; else elseTemplate">
+                             MAS <mdb-icon fas icon="arrow-down"></mdb-icon>
+                          </ng-container>
+                          <ng-template #elseTemplate>
+                            MENOS <mdb-icon fas icon="arrow-up"></mdb-icon>
+                          </ng-template>
+                        </button>
+
+                        <div class="" *ngIf="Doc">
+                            <p *ngFor="let item of documentos; let i=index">
+                                <a mdbBtn *ngIf="i>=2" color="teal" class="waves-light" mdbWavesEffect [href]="item.ruta" target="_blank">
+                                    <mdb-icon fas icon="file-download" class="left"></mdb-icon>
+                                    {{item.title}}</a>
+                            </p>
+                        </div>
+
+                        <hr>
+                        <button mdbBtn color="info" class="waves-light" type="button" (click)="showHideNewDoc()" mdbWavesEffect>
+                          <mdb-icon fas icon="archive"></mdb-icon> RECURSO DE REPOSICIÓN RÉGIMEN ESPECIAL
+                          <ng-container *ngIf="!newDoc; else elseTemplate2">
+                            <mdb-icon fas icon="arrow-down"></mdb-icon>
+                          </ng-container>
+                          <ng-template #elseTemplate2>
+                            <mdb-icon fas icon="arrow-up"></mdb-icon>
+                          </ng-template>
+                        </button>
+
+                        <div class="" *ngIf="newDoc">
+                            <p *ngFor="let item of documentosNew; let i=index">
+                                <a mdbBtn color="teal" class="waves-light" mdbWavesEffect [href]="item.ruta" target="_blank">
+                                    <mdb-icon fas icon="file-download" class="left"></mdb-icon>
+                                    {{item.title}}</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Content -->
+            </mdb-card>
+        </div>
+        <div class="col-lg-6 col-12">
+            <mdb-card style="background-image: url('../../../assets/img/paisaje3.jpeg')" class="card-image hoverable mb-3 mx-2">
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                    <div>
+                        <h3 class="text-warning mb-5">
+                            <mdb-icon fas icon="project-diagram"></mdb-icon>
+                            Proyectos
+                        </h3>
+                        <p>
+                            <a mdbBtn color="teal" class="waves-light" mdbWavesEffect href="../../../assets/docs/proyecto acu apoyo pgirs.pdf" target="_blank">
+                                <mdb-icon fas icon="file-download" class="left"></mdb-icon>
+                                Recicla Aceite de Cocina Usado</a>
+                            <a mdbBtn color="teal" class="waves-light" mdbWavesEffect href="../../../assets/docs/RESOLUCION 0316 de 01 MARZO 2018.pdf" target="_blank">
+                                <mdb-icon fas icon="file-download" class="left"></mdb-icon>
+                                Resolución 0316 del 2018 soporte legal</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Content -->
+            </mdb-card>
+            <!-- Card -->
+        </div>
+    </div>
+
+</section>

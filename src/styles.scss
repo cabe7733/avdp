@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "allura";
+    src: url("./assets/fonts/Allura-Regular.ttf");
+}
+
+@font-face {
+    font-family: "qwigley";
+    src: url("./assets/fonts/Qwigley-Regular.ttf");
+}
+
+.text-poppy-red {
+    color: #ef5350 !important;
+}
+
+.btn-poppy-red {
+    background-color: #ef5350 !important;
+}
+
+.bg-poppy-red {
+    background-color: #ef5350 !important;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #26a69a!important;
+    }
+}
+
+.intro-header {
+    height: unset !important;
+}
+
+.jarallax {
+    width: 100%;
+    height: 300px;
+}
+
+.intro-2 {
+    background: url("../src/assets/img/pajaro2.jpg")no-repeat center center;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background: linear-gradient( 40deg, #2096ff, #02e994) !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: linear-gradient( 40deg, #2096ff, #02e994) !important;
+    }
+}
+
+h6 {
+    line-height: 1.7;
+}
+
+.rgba-gradient .full-bg-img {
+    background: linear-gradient(45deg, rgba(42, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+    height: 100%;
+}
+
+@media (max-width: 450px) {
+    .margins {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1020px;
+    }
+}
+
+.carousel-multi-item .controls-top {
+    text-align: center;
+    margin-bottom: 1.88rem;
+}
+
+.collection-card .stripe.light {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.collection-card .stripe.dark {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.collection-card .stripe {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.view {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.card {
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.navbar {
+    box-shadow: inset 0px 0px 0px 0 rgb(0 0 0 / 0%), 0 2px 10px 0 rgb(0 0 0 / 0%) !important;
+}

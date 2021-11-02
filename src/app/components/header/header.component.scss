@@ -1,0 +1,18 @@
+.view {
+    height: 77vh !important;
+}
+
+.img-logo {
+    height: 40px;
+}
+
+.navbar {
+    box-shadow: inset 0px 0px 0px 0 rgb(0 0 0 / 0%), 0 2px 10px 0 rgb(0 0 0 / 0%);
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .img-logo {
+        height: 30px;
+    }
+}

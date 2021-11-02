@@ -1,0 +1,89 @@
+<section class="team-section text-center my-5">
+    <hr class="green">
+    <h2 class="h1-responsive font-weight-bold my-5">
+        <mdb-icon fas icon="users"></mdb-icon> Nosotros</h2>
+    <hr class="blue">
+
+    <div class="row mt-5">
+        <!-- Card -->
+        <div class="col-lg-6 col-md-12">
+            <mdb-card style="background-image: url('../../../assets/img/galeria\ 10.jpg')" class="card-image mb-2 mx-2">
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h5 class="teal-text font-weight-bold my-2">
+                            <mdb-icon fas icon="eye"></mdb-icon>
+                            VISION
+                        </h5>
+                        <p class="lead">
+                            En el 2024 la fundación a vuelo de pájaro será reconocida a nivel regional como una entidad sin ánimo de lucro,
+                        </p>
+                        <hr class="my-2 white">
+                        <p>
+                            líder en el desarrollo comunitario y la conservación ambiental, con alianzas estratégicas efectivas enfocadas en el emprendimiento sostenible y participativo, que contribuya al buen manejo de los recursos adquiridos, y que genere una mejora en el entorno
+                            y la calidad de vida de las comunidades involucradas.
+                        </p>
+                    </div>
+                </div>
+            </mdb-card>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <mdb-card style="background-image: url('../../../assets/img/galeria\ 14.jpg')" class="card-image mb-2 mx-2">
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-indigo-strong py-5 px-4">
+                    <div>
+                        <h5 class="orange-text font-weight-bold my-2">
+                            <mdb-icon fas icon="crosshairs"></mdb-icon>
+                            MISION
+                        </h5>
+                        <p class="lead">
+                            Contribuir con la conservación ambiental y el desarrollo sostenible
+                        </p>
+                        <hr class="my-2 white">
+                        <p>
+                            incentivando la economía circular, la interacción comunitaria, el emprendimiento y el trabajo colaborativo, fomentar el arte y la cultura engrandeciendo nuestro departamento y nuestro país; garantizando la participación activa de las comunidades, en articulación
+                            con entidades con fines similares, con base en el bienestar social y la conservación de las riquezas naturales del entorno.
+                        </p>
+                    </div>
+                </div>
+                <!-- Content -->
+            </mdb-card>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="my-5 teal">
+            <h2 class="h1-responsive font-weight-bold my-5">
+                <mdb-icon far icon="images"></mdb-icon> Galeria</h2>
+            <hr class="my-5 blue">
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation mb-3" [type]="'carousel-multi-item'" [animation]="'slide'">
+                    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+                        <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+                            <mdb-card class="collection-card z-depth-1-half my-1">
+                                <div class=" zoom waves-light" mdbWavesEffect>
+                                    <mdb-card-img [src]="card.img" alt=""></mdb-card-img>
+                                </div>
+                            </mdb-card>
+                        </div>
+                    </mdb-carousel-item>
+                </mdb-carousel>
+            </div>
+        </div>
+        <hr class="my-5 blue">
+        <div class="col-md-12 mb-3">
+            <mdb-carousel [animation]="'slide'">
+                <mdb-carousel-item *ngFor="let item of cards; let i=index">
+                    <img class="d-block w-100" [src]="item.img" alt="First slide">
+                    <div class="carousel-caption">
+                        <h3 class="h3-responsive">PAISAJES</h3>
+                    </div>
+                </mdb-carousel-item>
+            </mdb-carousel>
+        </div>
+    </div>
+</section>
