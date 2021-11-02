@@ -1,0 +1,52 @@
+<header class="intro-header">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav mb-5" [containerInside]="false">
+        <mdb-navbar-brand>
+            <a class="navbar-brand" [routerLink]="['/inicio']">
+                <img src="../../../assets/img/logo-removebg-preview.png" class="img-logo d-inline-block align-top" alt="">ONG A Vuelo de Pájaro</a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item waves-light" routerLinkActive="active" mdbWavesEffect [routerLink]="['/inicio']">
+                    <a class="nav-link">
+                        <mdb-icon fas icon="home"></mdb-icon>Inicio</a>
+                </li>
+                <li class="nav-item waves-light" routerLinkActive="active" mdbWavesEffect [routerLink]="['/nosotros']">
+                    <a class="nav-link">
+                        <mdb-icon fas icon="users"></mdb-icon>Nosotros</a>
+                </li>
+                <li class="nav-item waves-light" routerLinkActive="active" mdbWavesEffect [routerLink]="['/equipo']">
+                    <a class="nav-link">
+                        <mdb-icon fas icon="users-cog"></mdb-icon>Nuestro Equipo</a>
+                </li>
+                <li class="nav-item waves-light" routerLinkActive="active" mdbWavesEffect [routerLink]="['/proyectos-documentos']">
+                    <a class="nav-link">
+                        <mdb-icon fas icon="file-alt"></mdb-icon>Archivos</a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+
+    <section class="view intro-2 rgba-gradient">
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row flex-center pt-5 mt-5">
+                    <div class="col-md-6 col-xl-6 col-sm-3 text-center text-md-left margins">
+                        <div class="white-text">
+                            <h1 class="h1-responsive wow fadeInLeft" data-wow-delay="0.7s">ONG A vuelo de pájaro</h1>
+                            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.7s">
+                            <h6 class="wow fadeInLeft" data-wow-delay="0.7s">
+                                A vuelo de pájaro es una organización social nacida en el año 2017 en el municipio de Apía Risaralda, constituida legalmente como entidad sin ánimo de lucro en el año 2020. Promovemos la conservación ambiental y el desarrollo sostenible, involucrando
+                                las comunidades con una perspectiva pedagógica
+                            </h6>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-6 mt-xl-5 wow fadeInRight d-flex justify-content-center zoom" data-wow-delay="0.9s">
+                        <img src="../../../assets/img/logo-removebg-preview.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
